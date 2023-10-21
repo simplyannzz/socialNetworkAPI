@@ -18,7 +18,7 @@ I used the tools that I had on my computer, like Git, Vscode, Github, and Google
 
 1. Launch server
 2. Open on Insomina
-3. Check if it is working
+3. Check if It is working
 
 Screen-recording: LINK HERE
 
