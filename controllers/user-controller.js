@@ -21,7 +21,7 @@ const userControll = {
             .catch(err => res.status(500).json(err));
     },
     //updated user by Id
-    updateUserbyId(req, res) {
+    updateUserById(req, res) {
         User.findOneAndUpdate(req.params.id, req.body, { new: true })
             .then(userData => {
                 if (!userData) {
@@ -60,7 +60,7 @@ const userControll = {
     },
 
     //Deleted friend
-    deleteFriend(req, res) {
+    removeFriend(req, res) {
         User.findByOneAndUpdate(
             { _id: params.userId },
             { $pull: { friends: params.friendId } },

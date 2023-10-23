@@ -20,7 +20,6 @@ router.route('/:userID').get(getUserById).put(updateUserById).delete(deleteUser)
 
 
 
-
     // api / users /: userId / friends /: friendId
 // Post to add new friends to a user's friend list
 // Deleted to remove a friend from a user's friend list
