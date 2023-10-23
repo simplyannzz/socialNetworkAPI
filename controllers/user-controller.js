@@ -52,7 +52,7 @@ const userControll = {
         )
             .then(userData => {
                 if (!userData) {
-                    return res.status(404).json({ message: "User not found" });
+                    return res.status(404).json({ message: "Friend not found" });
                 }
                 res.json(userData);
             })
@@ -68,7 +68,7 @@ const userControll = {
         )
             .then(dbUserData => {
                 if (!dbUserData) {
-                    return res.status(404).json({ message: "User Id not found" });
+                    return res.status(404).json({ message: "Friend Id not found" });
                 }
                 // check if friends is deleted
                 const remove = !dbUserData.friends.include(params.friendId);

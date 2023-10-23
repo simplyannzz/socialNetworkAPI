@@ -64,7 +64,7 @@ const ThoughtControll = {
         try {
             const thought = await Thought.findByOneAndUpdate(
                 { _id: req.params.thoughtId },
-                { $addToSet: { reaction: req.body } },
+                { $addToSet: { reactions: req.body } },
                 { runValidators: true, new: true }
             );
             thought ? res.json(thought) : res.status(404).json({ message: "Not found" });
@@ -78,7 +78,7 @@ const ThoughtControll = {
         try {
             const thought = await Thought.findByOneAndUpdate(
                 { _id: params.thoughtId },
-                { $pull: { reactions: { reactionId: req.params.reactionId } } },
+                { $pull: { reactions: { reactionId: req.params.reactionId }}},
                 { runValidators: true, new: true }
             );
             thought ? res.json(thought) : res.status(404).json({ message: "Not found" });
